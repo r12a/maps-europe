@@ -1,0 +1,47 @@
+.maplink {
+	font-size: 3em;
+	float: right;
+	width: 25%;
+	margin: 0;
+	margin-left: 1em;
+	line-height: 1;
+}
+.era {
+	font-size: 0.5em;
+}
+.date {
+	font-size: 1.4em;
+	margin-right: 1em;
+}
+.sources {
+	font-size: 70%;
+}
+.flex_container {
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: 7.5%;
+	margin-right: 32%;
+}
+.timeline {
+	flex: 1.5;
+	min-width: 12em;
+}
+.mapInfo {
+	flex: 0.5;
+	min-width: 12em;
+	margin-left: 3em;
+}
+.mapInfo section:first-of-type h3 {
+	margin-top: 1em;
+}
+.mapNotes p {
+	font-size: 90%;
+}
+.flex_container p, .flex_container h3 {
+	margin-left: 0;
+	margin-right: 0;
+}
+.mapSources p {
+	font-size: 70%;
+	text-align: start;
+}

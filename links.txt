@@ -1,0 +1,48 @@
+<text font-weight="700" font-family="Myriad Pro" fill="#231f20" font-size="200px" color="black" transform="translate(550.78 454)">830<tspan font-size="72px" x="321.6" y="0"> AD</tspan></text><a xlink:href="AD_771.svg"><path class="cls-55" d="M622,506c-11.92,11.92-61.88,65-61.88,65s51.37,52.46,63.81,64.9V508"/></a><a xlink:href="AD_888.svg"><path class="cls-55" d="M781.41,633.92c11.92-11.92,61.88-65,61.88-65s-51.37-51.46-63.81-63.9V631.94"/></a>
+
+
+<text font-weight="700" font-family="Myriad Pro" fill="#231f20" font-size="200px" color="black" transform="translate(550.78 454)">888<tspan font-size="72px" x="321.6" y="0"> AD</tspan></text><a xlink:href="AD_830.svg"><path color="black" d="M622,506c-11.92,11.92-61.88,65-61.88,65s51.37,52.46,63.81,64.9V508"/></a><!--a xlink:href="AD_888.svg"><path color="black" d="M781.41,633.92c11.92-11.92,61.88-65,61.88-65s-51.37-51.46-63.81-63.9V631.94"/></a-->
+
+<text font-weight="700" font-family="Myriad Pro" fill="#231f20" font-size="200px" color="black" transform="translate(470 454)">1000<tspan font-size="72px" x="440" y="0"> AD</tspan></text><a xlink:href="AD_925.svg"><path color="black" d="M622,506c-11.92,11.92-61.88,65-61.88,65s51.37,52.46,63.81,64.9V508"/></a><!--a xlink:href="AD_1030.svg"><path color="black" d="M781.41,633.92c11.92-11.92,61.88-65,61.88-65s-51.37-51.46-63.81-63.9V631.94"/></a-->
+
+
+
+umayyad		fbef5a
+barcelona	94782d
+france		f15b2a
+provence	9e1f63
+burgundy	f5865d
+italy		faa71a
+germany		4f4219
+benevento	00974c
+capua		3f59a8
+byzantine	662d91
+naples		ee3781
+fatimid		7a7a61
+swedes		5152a3
+scotland	b51d8e
+hungary		991c52
+
+russia 		333333
+azerbaijan	003d2b
+
+poland		ec008c
+
+mosul		d7df23
+
+
+absagia		8b5e3c
+abbasid		f5865d
+aleppo		be1e2d
+aragon		ee3781
+armenia		be202e
+buyid		006838
+castille	f5865d
+danes		00974c
+iberia		8b5e3c
+leon		a72f23
+navarre		ee3781
+norwegians	4b7838
+salerno		f1da0e
+slavs		c49a6c
+persians	edcc19
