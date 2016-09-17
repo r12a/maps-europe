@@ -1,6 +1,6 @@
 <?php
 
-# THIS IS FOR THE FAREAST MAP
+# THIS IS FOR THE EUROPE MAP
 
 $yeargroup = [];
 $yeargroup[138] = [0,230];
@@ -50,12 +50,12 @@ if(isset($_GET['dates']) && $_GET['dates'] != '') {
 	for ($i=0;$i<count($datearray);$i++) {
 		$era = 'CE';
 		if ($datearray[$i] < 0) $era = 'BCE';
-		$filename = $era.'_'.abs($datearray[$i]).'.svg';
+		$filename = $era.'_'.abs($datearray[$i]);
 		echo 'filename: '.$filename.'<br/>';
 	
 		#chmod($filename, 0777);
 	
-		$fp = fopen($sourcePath.$filename, "r");
+		$fp = fopen($sourcePath.$filename.'.svg', "r");
 		if (!$fp) { $message = 'Could not open file.  Check the spelling of the URI.'; }
 	
 		$message = "\n".'<text font-weight="700" font-family="\'Myriad Pro\', Arial, sans-serif" fill="#231f20" font-size="200px" color="black" text-anchor="end" transform="translate(900 454)">'.abs($datearray[$i]).'<tspan font-size="72px" x="100" y="0">'.$era.'</tspan></text>';
@@ -182,7 +182,7 @@ foreach ($yeargroup as $year => $val) {
 		}
 	</script>
 eot;
-		$svgtext = fread($fp,  filesize($sourcePath.$filename));
+		$svgtext = fread($fp,  filesize($sourcePath.$filename.'.svg'));
 		fclose($fp);
 		
 		echo 'svgtext length '.strlen($svgtext)."<br/>";
@@ -203,7 +203,7 @@ eot;
 		
 		echo 'updated svgtext length '.strlen($newsvgtext)."<br/>";
 		
-		if (is_writable($targetPath.$filename)) { echo "is writeable<br/>"; }
+		if (is_writable($targetPath.$filename.'.svg')) { echo "is writeable<br/>"; }
 		else { echo "NOT WRITEABLE<br/>";  exit; }
 
 		//chmod($filename,0777);
@@ -216,12 +216,36 @@ eot;
 		//	}
 
 
-		$numbytes = file_put_contents($targetPath.$filename, $newsvgtext);
-  		echo "Wrote ($numbytes) bytes to file ($targetPath$filename)";
+		$numbytes = file_put_contents($targetPath.$filename.'.svg', $newsvgtext);
+  		echo "Wrote ($numbytes) bytes to file ($targetPath$filename.svg)<br/>";
 
 		//fclose($fp);
         
-       // print ($messagex);
+       
+        //************** CREATE THE HTML FILE *************
+        
+		$htmlfp = fopen('../html_raw/'.$filename.'.html', "r");
+		if (!$htmlfp) { $message = 'Could not open file.  Check the spelling of the URI.'; }
+
+		$htmltext = fread($htmlfp,  filesize('../html_raw/'.$filename.'.html'));
+		fclose($htmlfp);
+	
+		echo 'htmltext length '.strlen($htmltext)."<br/>";
+        
+        // add the SVG text
+		$htmltext = preg_replace('/<svg><\/svg>/',$newsvgtext,$htmltext);
+		$htmltext = preg_replace('/\.\.\/relief_map/','relief_map',$htmltext);
+		echo 'htmltext with base '.strlen($htmltext)."<br/>";
+		
+		$htmltext = preg_replace('/\.svg/','.html',$htmltext);
+		echo 'updated htmltext length '.strlen($htmltext)."<br/>";
+		
+		if (is_writable('../'.$filename.'.html')) { echo "is writeable<br/>"; }
+		else { echo "NOT WRITEABLE<br/>";  exit; }
+
+
+		$numbytes = file_put_contents('../'.$filename.'.html', $htmltext);
+  		echo "Wrote ($numbytes) bytes to file ($filename.html)";
 		}
 	}
 
