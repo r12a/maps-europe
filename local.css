@@ -1,10 +1,18 @@
-.maplink {
-	font-size: 3em;
-	float: right;
-	width: 25%;
+body {
+	background-color: white;
+	border: 0;
+	padding: 0;
+	color: #666;
 	margin: 0;
-	margin-left: 1em;
-	line-height: 1;
+}
+h2 a { 
+	text-decoration: none;
+	color: #666;
+}
+#description {
+	margin: 3em;
+	font-family: "myriad pro", adobe-clean, 'Helvetica Neue', robotolight, calibri, corbel, "Segoe UI", helvetica, sans-serif;
+	font-size: 16px;
 }
 .era {
 	font-size: 0.5em;
@@ -19,17 +27,16 @@
 .flex_container {
 	display: flex;
 	flex-flow: row wrap;
-	margin-left: 7.5%;
-	margin-right: 32%;
+	margin: 0;
 }
 .timeline {
 	flex: 1.5;
 	min-width: 12em;
+	margin-right: 3em;
 }
 .mapInfo {
 	flex: 0.5;
 	min-width: 12em;
-	margin-left: 3em;
 }
 .mapInfo section:first-of-type h3 {
 	margin-top: 1em;
