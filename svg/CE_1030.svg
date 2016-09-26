@@ -64,6 +64,10 @@
 	.st58{font-family:'Myriad Pro',Helvetica,Arial,sans-serif;}
 	.st59{fill:#ED1C24;stroke:#1C75BC;stroke-linecap:round;stroke-miterlimit:10;}
 </style>
+ <script type="text/ecmascript">
+// set height proportional to width
+document.getElementById('limit-div').style.height = (window.innerWidth/2905*2485)+'px'
+</script>
  
  
  
