@@ -58,7 +58,7 @@
 </style>
  <script type="text/ecmascript">
 // set height proportional to width
-document.getElementById('limit-div').style.height = (window.innerWidth/2905*2485)+'px'
+document.getElementById('limit-div').style.height = (window.innerWidth/2905.1*2485.5)+'px'
 </script>
  
  

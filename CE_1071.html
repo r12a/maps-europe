@@ -71,7 +71,7 @@
 </style>
  <script type="text/ecmascript">
 // set height proportional to width
-document.getElementById('limit-div').style.height = (window.innerWidth/2905*2485)+'px'
+document.getElementById('limit-div').style.height = (window.innerWidth/2905.1*2485.5)+'px'
 </script>
  
  
@@ -9590,7 +9590,66 @@ document.getElementById('limit-div').style.height = (window.innerWidth/2905*2485
 		}
 	</script>
 
-</svg>
+</svg></div><div id="options" style="display:flex; flex-flow: row nowrap;">
+<p style="flex:2;">&nbsp;</p>
+<p style="text-align:center; flex: 1;"><a href="CE_1030">1030CE ◀</a> <a href="CE_1092">▶ 1092CE</a></p>
+<p style="flex:2;">Options: &nbsp; <span class="option" onclick="
+	if(document.getElementById('bitmap').style.display!='none'){
+	document.getElementById('bitmap').style.display='none';
+	document.getElementById('coastlines').style.opacity='1';
+	localStorage.schematic = 'yes'; } 
+	else {
+	document.getElementById('bitmap').style.display='block';
+	document.getElementById('coastlines').style.opacity='0.3';
+	localStorage.schematic = 'no'; } 
+	">Relief</span> &bull;
+	<span class="option" onclick="
+	var modern_borders = document.getElementById('modern_borders'); 
+	if(modern_borders.style.display=='block'){modern_borders.style.display='none';
+	localStorage.modernBorders = 'no';} 
+	else {modern_borders.style.display='block';
+	localStorage.modernBorders = 'yes';}
+	">Borders</span> &bull;
+	<span class="option" onclick="
+	var rivercourses = document.getElementById('rivercourses'); 
+	var rivernames = document.getElementById('rivernames'); 
+	if (rivercourses.style.display=='block'){
+		rivercourses.style.display='none';
+		rivernames.style.display='none';
+		localStorage.rivers = 'no';
+		} 
+	else {
+		rivercourses.style.display='block';
+		rivernames.style.display='block';
+		localStorage.rivers = 'yes';
+		}
+	">Rivers</span> &bull;
+	<span class="option" onclick="
+	if(document.getElementById('text').style.display=='none'){
+	document.getElementById('modern_text').style.display='none';
+	document.getElementById('text').style.display='block';
+	localStorage.modernNames = 'no';} 
+	else {
+	document.getElementById('modern_text').style.display='block';
+	document.getElementById('text').style.display='none';
+	localStorage.modernNames = 'yes';} 
+	if(document.getElementById('cities').style.display=='none'){
+	document.getElementById('modern_cities').style.display='none';
+	document.getElementById('cities').style.display='block';
+	localStorage.modernCities = 'no';} 
+	else {
+	document.getElementById('modern_cities').style.display='block';
+	document.getElementById('cities').style.display='none';
+	localStorage.modernCities = 'yes';} 
+	">Names</span> &bull;
+	<span class="option" onclick=" 
+	var shading = document.getElementById('borders')
+	if(shading.style.display == 'none') shading.style.display='block'
+    else if (shading.style.display == 'block') shading.style.display='none'
+	else shading.style.display='none'
+	">Shading</span>
+    </p>
+</div>
 
 <section id="description">
 <h2><a href="#description">1071, Novgorod fragmentation, Norman Italy</a></h2>
